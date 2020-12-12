@@ -233,3 +233,5 @@ $RECYCLE.BIN/
 *.dll
 *.pdb
 .vs
+.gitigore
+notes/notes.csproj
