@@ -1,5 +1,5 @@
 <!-- readme.md v1.6.5.3
-SimpleNotes (SNOTE!)
+Notes (NOTE)
 created: 01 Oct 2019
 updated: 22 Jan 2022 -->
 
@@ -7,15 +7,15 @@ updated: 22 Jan 2022 -->
 
 
 
-[![SimpleNotes][MOD:shd:latest]][MOD:forum] [![KSP version][KSP:shd]][KSP:url]  [![License GPLv3][LIC:shd]][LIC:url]  
+[![Notes][MOD:shd:latest]][MOD:forum] [![KSP version][KSP:shd]][KSP:url]  [![License GPLv3][LIC:shd]][LIC:url]  
 [![Curseforge][CURSFG:shd]][CURSFG:url] [![CKAN][CKAN:shd]][CKAN:url] [![GitHub][GITHUB:shd]][GITHUB:url] [![SpaceDock][SPCDCK:shd]][SPCDCK:url]  
 ![Code][CODE:shd] ![KSP-AVC][AVC:shd] ![Validate AVC .version files][AVCVLD:shd]  
 
 
 
-# SimpleNotes (SNOTE!)
+# Notes (NOTE)
 
-Simple note plugin to take notes in game for Kerbal Space Program.
+ Simple plugin to take notes in game for Kerbal Space Program.
 
 *formerly ksp_notes*
 
@@ -26,7 +26,7 @@ By [`zer0Kerbal`][LINK:zer0Kerbal], originally by [`agises(hashashin)`][LINK:agi
 
 ### Preamble by [@`agises`][LINK:agises]
 
-> Hi, I want to share this simple plugin I make for personal use and learning purposes, it is a space to put short notes (some form of notepad). It is hidden by default use `<ALT> + <N>` keys (by default) to unhide/hide or the toolbar button. The notes are persistent via the save button and the interface shows everywhere in the game. I'm not a programmer and this is my very first approach to c# and unity so suggestions are more than welcome. ![:rolleyes:](https://kerbal-forum-uploads.s3.us-west-2.amazonaws.com/emoticons/default_k_rolleyes.gif)
+> Hi, I want to share this  plugin I make for personal use and learning purposes, it is a space to put short notes (some form of notepad). It is hidden by default use `<ALT> + <N>` keys (by default) to unhide/hide or the toolbar button. The notes are persistent via the save button and the interface shows everywhere in the game. I'm not a programmer and this is my very first approach to c# and unity so suggestions are more than welcome. ![:rolleyes:](https://kerbal-forum-uploads.s3.us-west-2.amazonaws.com/emoticons/default_k_rolleyes.gif)
 >
 >The up and down arrows are usable as text scroll, the next/prev buttons works as the buttons in the normal notes interface, and the green arrow will show some vessel info. You can use the rpm format in the notes, ie:
 >
@@ -148,51 +148,51 @@ or [![CKAN][CKAN:img]][CKAN:url] [^3]
 > License: [![License GPLv3][LIC:org:shd]][LIC:org:url] ![][LIC:org:log]
 
 <!-- mod links -->
-[MOD:forum]: https://forum.kerbalspaceprogram.com/index.php?/topic/192742-* "SimpleNotes Forum Thread"
-[MOD:chlog]: https://github.com/zer0Kerbal/SimpleNotes/changelog.md "Changelog"
+[MOD:forum]: https://forum.kerbalspaceprogram.com/index.php?/topic/192742-* "Notes Forum Thread"
+[MOD:chlog]: https://github.com/zer0Kerbal/Notes/changelog.md "Changelog"
 [MOD:contr]: https://github.com/zer0Kerbal/.github/blob/master/.github/CONTRIBUTING.md "Contributing"
-[MOD:discu]: https://github.com/zer0Kerbal/SimpleNotes/discussions "Discussions"
-[MOD:issue]: https://github.com/zer0Kerbal/SimpleNotes/wiki/Known-Issues "GitHub Issues"
-[MOD:licns]: https://github.com/zer0Kerbal/SimpleNotes/blob/master/LICENSE "Github License"
-[MOD:known]: https://github.com/zer0Kerbal/SimpleNotes/wiki/Known-Issues "Known Issues"
-[MOD:local]: https://github.com/zer0Kerbal/SimpleNotes/blob/master/GameData/SimpleNotes/Localization/readme.md "Localization"
-[MOD:wiki]: https://github.com/zer0Kerbal/SimpleNotes/ "Wiki"
+[MOD:discu]: https://github.com/zer0Kerbal/Notes/discussions "Discussions"
+[MOD:issue]: https://github.com/zer0Kerbal/Notes/wiki/Known-Issues "GitHub Issues"
+[MOD:licns]: https://github.com/zer0Kerbal/Notes/blob/master/LICENSE "Github License"
+[MOD:known]: https://github.com/zer0Kerbal/Notes/wiki/Known-Issues "Known Issues"
+[MOD:local]: https://github.com/zer0Kerbal/Notes/blob/master/GameData/Notes/Localization/readme.md "Localization"
+[MOD:wiki]: https://github.com/zer0Kerbal/Notes/ "Wiki"
 
 <!--- mod -->
-[MOD:shd:latest]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/SimpleNotes/master/json/mod.json
+[MOD:shd:latest]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/Notes/master/json/mod.json
 
-[CODE:shd]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/SimpleNotes/master/json/code.json
+[CODE:shd]: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/Notes/master/json/code.json
 
 <!--- original mod stuff -->
 [MOD:org:source]: https://github.com/hashashin/ksp_notes/releases "GitHub"
 [MOD:org:thread]: https://forum.kerbalspaceprogram.com/index.php?/topic/50884-* "KSP Forum"  
 [MOD:org:download]: http://spacedock.info/mod/77 "SpaceDock"  
 
-License [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
 <!-- GPLv3 -->
+License [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
 [LIC:org:url]: https://www.gnu.org/licenses/gpl-3.0.html "GPLv3"  
 [LIC:org:log]: https://camo.githubusercontent.com/c4831ba87d3212335f4f54c75acb34a911214cbd63010686bc96e31a013c6dcc/68747470733a2f2f692e706f7374696d672e63632f39306b434473374b2f67706c76332d34387831372e706e67 "GPLv3"
-[LIC:org:shd]:  https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/SimpleNotes/master/json/license.json
+[LIC:org:shd]:  https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/Notes/master/json/license.json
 
 <!--- license -->
 [LIC:url]: https://www.gnu.org/licenses/gpl-3.0.html "GPLv3"  
 [LIC:log]: https://camo.githubusercontent.com/c4831ba87d3212335f4f54c75acb34a911214cbd63010686bc96e31a013c6dcc/68747470733a2f2f692e706f7374696d672e63632f39306b434473374b2f67706c76332d34387831372e706e67 "GPLv3"
-[LIC:shd]:  https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/SimpleNotes/master/json/license.json
+[LIC:shd]:  https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zer0Kerbal/Notes/master/json/license.json
 
 <!--- AVC -->
 [AVC:shd]:  https://img.shields.io/badge/KSP-AVC--supported-00C961.svg?labelColor=black&style=plastic
-[AVCVLD:shd]: https://github.com/zer0Kerbal/SimpleNotes/workflows/Validate%20AVC%20.version%20files/badge.svg?labelColor=black&style=plastic "AVC-Valid - thank you to DasSkelett"
+[AVCVLD:shd]: https://github.com/zer0Kerbal/Notes/workflows/Validate%20AVC%20.version%20files/badge.svg?labelColor=black&style=plastic "AVC-Valid - thank you to DasSkelett"
 
 <!--- CKAN -->
 [CKAN:img]: https://i.postimg.cc/x8XSVg4R/sj507JC.png "CKAN"
 [CKAN:url]: http://forum.kerbalspaceprogram.com/index.php?/topic/197082-* "CKAN"
-[CKAN:shd]: https://img.shields.io/badge/CKAN-SimpleNotes-white.svg?labelColor=E32811&style=plastic "CKAN"
+[CKAN:shd]: https://img.shields.io/badge/CKAN-Notes-white.svg?labelColor=E32811&style=plastic "CKAN"
 
 <!--- release links -->
-[CURSFG:url]: https://www.curseforge.com/kerbal/ksp-mods/SimpleNotes "Curseforge"
+[CURSFG:url]: https://www.curseforge.com/kerbal/ksp-mods/Notes "Curseforge"
 [CURSFG:shd]: https://img.shields.io/badge/CurseForge-Listed-white.svg?labelColor=6441A4&style=plastic&logo=curseforge "Curseforge"
 
-[GITHUB:url]: https://github.com/zer0Kerbal/SimpleNotes/ "GitHub"
+[GITHUB:url]: https://github.com/zer0Kerbal/Notes/ "GitHub"
 [GITHUB:shd]: https://img.shields.io/badge/Github-Listed-white.svg?labelColor=181717&style=plastic&logo=github "GitHub"
 
 [SPCDCK:url]: http://spacedock.info/mod/77 "SpaceDock"
