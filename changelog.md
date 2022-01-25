@@ -1,16 +1,16 @@
 <!-- 
 changelog.md v1.0.1.0
-SimpleNotes! (SNOTE!)
+Notes (NOTE)
 created: 15 Jan 2014
 updated: 22 Jan 2022
 -->
 
 # Changelog  
-  
-| modName | SimpleNotes! (SNOTE!)                                            |
-| ------- | ---------------------------------------------------------------- |
-| license | GPLv3                                                            |
-| website | (https://forum.kerbalspaceprogram.com/index.php?/topic/850884-*) |
+
+| modName | Notes  (NOTE)                                                   |
+| ------- | --------------------------------------------------------------- |
+| license | GPLv3                                                           |
+| website | (https://forum.kerbalspaceprogram.com/index.php?/topic/50884-*) |
 | author  | hashashin(agises) and zer0Kerbal                                |
 
 ## Version 0.17.0.0-adoption
@@ -20,12 +20,19 @@ updated: 22 Jan 2022
 
 ### Code
 
-* closes #28 - Click-Through-Blocker
-  * remove CTB integration (less is more)
-* closes #29 - Version.cs v2.0.2.0.
-  * replace `AssemblyVersion.cs` with `Version.tt` to both DLLs
+* remove CTB integration (less is more)
+  * closes #28 - Click-Through-Blocker
+* replace `AssemblyVersion.cs` with `Version.tt` to both DLLs
+  * closes #29 - Version.cs v2.0.2.0.
+* update `notes.csprog` and `notesRPM.csprog` and `notes.sln`
+  * closes #32 - Update `.csprog`'s and `notes.sln`
 
-###
+### Documentation
+
+* Create and Update [readme.md] v1.6.5.2 :bread:
+  * rename from README.md --> readme.md
+  * Create and Update [readme.md] v1.6.5.2
+  * closes #31
 
 ## Version 0.16
 
@@ -52,7 +59,8 @@ updated: 22 Jan 2022
 
 ## Version 0.14.1
 
-* update for 1.3, lazy recompile.
+* update for 1.3
+* lazy recompile.
 
 ## Version 0.14
 
