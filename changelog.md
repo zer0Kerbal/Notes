@@ -31,7 +31,22 @@ updated: 22 Jan 2022
   * notesRPM
   * closes #33 - Update AssemblyInfo.cs
 * Create `notesRPM.version`
-  * * closes #34 - Create notesRPM.version
+  * closes #34 - Create notesRPM.version
+* Update `InstallChecker.cs`
+  * version 2.1.0.0
+  * closes #35 - Update InstallChecker.cs
+* Remove CTB
+  * remove using ClickThroughFix;
+  * 0x - Replace calls to ClickThruBlocker.GUILayoutWindow with GUILayout.Window
+  * 6x - Replace calls to ClickThruBlocker.GUIWindow with GUI.Window
+  * closes #36 - Remove CTB
+* Change namespace
+  * rename from `notes` to `Notes`
+  * closes #27 - Change namespace
+* Remove extraneous code files
+  * Support/Logging.cs
+  * Support/Utilities.cs
+  * closes #37 - Remove extraneous code files
 
 ### Documentation
 
