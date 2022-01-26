@@ -19,7 +19,7 @@
 	//
 	// Update the following with mod name as listed on the .version file
 	//
-	string PROJECT_NAME = "Notes";
+	string PROJECT_NAME = "notesRPM";
 	int major = 0;
 	int minor = 0;
 	int patch = 0;
