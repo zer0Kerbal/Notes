@@ -22,10 +22,16 @@ updated: 22 Jan 2022
 
 * remove CTB integration (less is more)
   * closes #28 - Click-Through-Blocker
-* replace `AssemblyVersion.cs` with `Version.tt` to both DLLs
+* Replace `AssemblyVersion.cs` with `Version.tt` for both projects
   * closes #29 - Version.cs v2.0.2.0.
 * update `notes.csprog` and `notesRPM.csprog` and `notes.sln`
   * closes #32 - Update `.csprog`'s and `notes.sln`
+* update `AssemblyInfo.cs`
+  * Notes
+  * notesRPM
+  * closes #33 - Update AssemblyInfo.cs
+* Create `notesRPM.version`
+  * * closes #34 - Create notesRPM.version
 
 ### Documentation
 
