@@ -48,6 +48,18 @@ updated: 22 Jan 2022
   * Support/Utilities.cs
   * closes #37 - Remove extraneous code files
 
+### Localization
+* Localize `InstallChecker.cs`
+  * add #NOTES-IC-00
+  * add #NOTES-IC-01
+  * create Notes/Localization folder
+  * add `readme.md`
+  * add `quickstart.md`
+  * create `en-us.cfg`
+  * updates #10 - Localization - Master
+  * updates #11 - Localization - English (United States) <en-us.cfg>
+  * closes #39 - Localize `InstallChecker.cs`
+
 ### Documentation
 
 * Create and Update [readme.md] v1.6.5.2 :bread:

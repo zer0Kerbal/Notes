@@ -38,8 +38,8 @@ namespace Notes
                     anchorMin: new Vector2(0.5f, 0.5f),
                     anchorMax: new Vector2(0.5f, 0.5f),
                     dialogName: "InstallChecker",
-                    title: Localizer.Format("#MOAR-IC-00" + " InstallChecker", Version.Text),
-                    message: Localizer.Format("#MOAR-IC-01", Version.Text, Localizer.Format("#MOAR-IC-00"), FOLDERNAME, String.Join("\n", badPaths.ToArray())),
+                    title: Localizer.Format("#NOTES-IC-00" + " InstallChecker", Version.Text),
+                    message: Localizer.Format("#NOTES-IC-01", Version.Text, Localizer.Format("#NOTES-IC-00"), FOLDERNAME, String.Join("\n", badPaths.ToArray())),
                     //"Incorrect <<1>> v<<2>> installation.\n<<1>> has been installed incorrectly and will not function properly. All files should be located in KSP/GameData/<<3>>. Do not move any files from inside that folder.\n\nIncorrect path(s):\n<<4>>
                     buttonMessage: "OK",
                     persistAcrossScenes: false,
