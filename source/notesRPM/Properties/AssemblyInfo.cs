@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("notesRPM")]
-[assembly: AssemblyCopyright("Copyright ©  2015 hashashin")]
+[assembly: AssemblyCopyright("Copyright © 2016, 2021, 2022 hashashin and zer0Kerbal")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -22,17 +22,9 @@ using System.Runtime.InteropServices;
 // El siguiente GUID sirve como identificador de typelib si este proyecto se expone a COM
 [assembly: Guid("9eed1e7a-ae2d-48a1-847c-2555bdeb4487")]
 
-// La información de versión de un ensamblado consta de los cuatro valores siguientes:
-//
-//      Versión principal
-//      Versión secundaria 
-//      Número de compilación
-//      Revisión
-//
 // Puede especificar todos los valores o establecer como predeterminados los números de compilación y de revisión 
 // mediante el carácter '*', como se muestra a continuación:
 // [assembly: AssemblyVersion("1.0.*")]
-//[assembly: AssemblyVersion("0.2")]
-[assembly: AssemblyFileVersion("0.16")]
-[assembly: AssemblyVersion("0.16")]
-
+// [assembly: AssemblyVersion("0.2")]
+// [assembly: AssemblyFileVersion("0.16")]
+// [assembly: AssemblyVersion("0.16")]
