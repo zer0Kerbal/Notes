@@ -1,10 +1,17 @@
 {
-    "schedule": "weekly"
+    "schedule": "weekly",
     "ignoredFiles": [
-        "**/GameData/**",
-        "docs/LegalMumboJumbo/*"
+        "GameData/*",
+        "docs/LegalMumboJumbo/*",
+        "GameData/Notes/*",
+        "GameData/Notes/Textures/*",
+        "source/*",
+        "**/Assets/**",
+        "**/Flags/**",
+        "**/Agents/**",
+        "**/@Thumbs/**"
     ],
-    "aggressiveCompression": "false"
-    "compressWiki": "true"
+    "aggressiveCompression": "false",
+    "compressWiki": "true",
     "minKBReduced": 500
 }
