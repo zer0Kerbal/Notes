@@ -17,6 +17,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 //
+// Email: zer0Kerbal at hotmail dot com
 // Email: mecagoenbush at gmail dot com
 // Freenode & EsperNet: hashashin
 //
@@ -27,33 +28,63 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using notes;
+using SimpleNotes;
 
 namespace notesRPM
 {
+	/// <summary>
+	/// notesRPM part module
+	/// </summary>
 	public class notesRPM : InternalModule
 	{
 		//Buttons
+		/// <summary>
+		/// public int noteButton 
+		/// </summary>
 		[KSPField]
 		public int noteButton = 0;
+		/// <summary>
+		/// public int downButton
+		/// </summary>
 		[KSPField]
 		public int downButton = 1;
+		/// <summary>
+		/// public int infoButton
+		/// </summary>
 		[KSPField]
 		public int infoButton = 2;
 
+		/// <summary>
+		/// int nextnoteButton
+		/// </summary>
 		[KSPField]
 		public int nextnoteButton = 7;
+		/// <summary>
+		/// int prevnoteButton
+		/// </summary>
 		[KSPField]
 		public int prevnoteButton = 8;
 
 
 		//kOS Fields
+		/// <summary>
+		/// kOS: string textTint #009900ff
+		/// </summary>
 		[KSPField]
 		public string textTint = "<color=#009900ff>";
+		/// <summary>
+		/// kOS: string textTintUnpowered #ffffff3e
+		/// </summary>
 		[KSPField]
 		public string textTintUnpowered = "<color=#ffffff3e>";
+		/// <summary>
+		/// kOS: int consoleWidth = 40
+		/// </summary>
 		[KSPField]
 		public int consoleWidth = 40;
+		/// <summary>
+		/// kOS: int consoleHeight = 20
+		/// </summary>
 		[KSPField]
 		public int consoleHeight = 20;
 
@@ -62,7 +93,12 @@ namespace notesRPM
 		private bool started = false;
 		private Notes notes;
 
-
+		/// <summary>
+		/// processes content
+		/// </summary>
+		/// <param name="screenWidth"></param>
+		/// <param name="screenHeight"></param>
+		/// <returns></returns>
 		public string ContentProcessor(int screenWidth, int screenHeight)
 		{
 			if (started)
@@ -76,6 +112,10 @@ namespace notesRPM
 			return response;
 		}
 
+		/// <summary>
+		/// ButtonProcessor(int buttonID)
+		/// </summary>
+		/// <param name="buttonID"></param>
 		public void ButtonProcessor(int buttonID)
 		{
 			if (buttonID == noteButton)
@@ -153,6 +193,9 @@ namespace notesRPM
 		}
 	}
 
+	/// <summary>
+	/// unused class
+	/// </summary>
 	public class RPMConsole : InternalModule
 	{
 	}
