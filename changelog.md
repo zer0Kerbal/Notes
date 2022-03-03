@@ -1,3 +1,8 @@
+---
+permalink: /Changelog.html
+title: Change Log
+---
+
 <!-- 
 changelog.md v1.0.1.0
 Notes (NOTE)
@@ -6,12 +11,16 @@ updated: 22 Jan 2022
 -->
 
 # Changelog  
-
-| modName | Notes  (NOTE)                                                   |
-| ------- | --------------------------------------------------------------- |
-| license | GPLv3                                                           |
-| website | (https://forum.kerbalspaceprogram.com/index.php?/topic/50884-*) |
-| author  | hashashin(agises) and zer0Kerbal                                |
+  
+| modName    | Notes (NOTE)                                               |
+| ---------- | ---------------------------------------------------------- |
+| license    | GPLv3                                                      |
+| author     | hashashin(agises), zer0Kerbal                              |
+| forum      | (https://forum.kerbalspaceprogram.com/index.php?/topic/-*) |
+| github     | (https://github.com/zer0Kerbal/zer0Kerbal/Notes)           |
+| curseforge | (https://www.curseforge.com/kerbal/ksp-mods/Notes)         |
+| spacedock  | (https://spacedock.info/mod/77)                            |
+| ckan       | Notes                                                      |
 
 ## Version 0.17.0.0-adoption
 
