@@ -1,5 +1,5 @@
 ﻿// -------------------------------------------------------------------------------------------------
-// notesRPM.cs 0.2
+// notesRPM.cs 0.2.0.0
 //
 // Simple KSP plugin to take notes ingame.
 // Copyright (C) 2016 Iván Atienza
@@ -28,7 +28,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using SimpleNotes;
+using Notes;
+using KSP.Localization;
 
 namespace notesRPM
 {
@@ -89,7 +90,7 @@ namespace notesRPM
 		public int consoleHeight = 20;
 
 		//General State Variables
-		private string response = "Notes terminal";
+		private string response = Localizer.Format("#NOTES-RPM-001"); // Notes terminal
 		private bool started = false;
 		private Notes notes;
 

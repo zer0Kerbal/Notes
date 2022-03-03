@@ -1,8 +1,9 @@
 ﻿// -------------------------------------------------------------------------------------------------
-// notes.cs 0.14.1
+// notes.cs 0.17.0.0
 //
 // Simple KSP plugin to take notes ingame.
 // Copyright (C) 2016 Iván Atienza
+// Copyright (C) 2022 zer0Kerbal
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -17,7 +18,10 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 //
-// Email: mecagoenbush at gmail dot com
+// Email:
+// zer0Kerbal at hotmail dot com
+// mecagoenbush at gmail dot com
+//
 // Freenode & EsperNet: hashashin
 //
 // -------------------------------------------------------------------------------------------------
@@ -32,6 +36,8 @@ using UnityEngine;
 using File = System.IO.File;
 
 using KSP.UI.Screens;
+using KSP.Localization;
+
 using ToolbarControl_NS;
 
 namespace Notes
@@ -54,7 +60,8 @@ namespace Notes
         private const string _logPrefix = "log_";
 
         // The "show it" text of toggle delete button.
-        private const string _showButtonDelText = "Show delete";
+        // private const string _showButtonDelText = "Show delete";
+        private readonly string _showButtonDelText = Localizer.Format("#NOTES-EXP-001"); // "Show delete";
 
         // The "hide it" text of toggle delete button.
         private const string _hideButtonDelText = "Hide delete";
@@ -67,7 +74,7 @@ namespace Notes
 
         // The reload icon texture file location.
         private readonly string _reloadIconUrl = "file://" + KSPUtil.ApplicationRootPath.Replace("\\", "/") +
-                                                 "/GameData/notes/Textures/reload.png";
+                                                 "/GameData/Notes/Textures/reload.png";
 
         // The toolbar texture off.
         private const string _btextureOff = "notes/Textures/icon_off";
@@ -189,7 +196,7 @@ namespace Notes
             File.Delete(_notesDir + _fileNames[_selectFileGridInt] + _notesExt);
             if (!((HighLogic.LoadedScene == GameScenes.LOADING) || (HighLogic.LoadedScene == GameScenes.LOADINGBUFFER)))
             {
-                ScreenMessages.PostScreenMessage(_fileNames[_selectFileGridInt] + ".txt DELETED!", 3f);
+                ScreenMessages.PostScreenMessage(Localizer.Format("NOTE-014", _fileNames[_selectFileGridInt]), 3f); // _fileNames[_selectFileGridInt] + ".txt DELETED!"
             }
         }
 
@@ -199,10 +206,11 @@ namespace Notes
             GUILayout.BeginVertical();
             GUILayout.BeginHorizontal();
             GUI.contentColor = Color.red;
-            GUILayout.Label("Are you sure want to delete: " + _fileNames[_selectFileGridInt] + "?");
+            GUILayout.Label(Localizer.Format("#NOTES-GUI-003", _fileNames[_selectFileGridInt])); // "Are you sure want to delete: " + _fileNames[_selectFileGridInt] + "?"
             GUI.contentColor = Color.white;
             GUILayout.BeginVertical();
-            if (GUILayout.Button("Yes"))
+            //if (GUILayout.Button("Yes"))
+            if (GUILayout.Button(Localizer.Format("#NOTES-GUI-001"))) // Yes
             {
                 Delete();
                 _fileNames = null;
@@ -229,18 +237,20 @@ namespace Notes
             GUILayout.BeginVertical();
             GUILayout.BeginHorizontal();
             GUI.contentColor = Color.red;
-            GUILayout.Label("Are you sure want to delete: " + _dirs[_selectDirGridInt] + "?");
+            //GUILayout.Label("Are you sure want to delete: " + _dirs[_selectDirGridInt] + "?");
+            GUILayout.Label("#NOTES-GUI-003", _dirs[_selectDirGridInt]);
             GUI.contentColor = Color.white;
             GUILayout.BeginVertical();
-            if (GUILayout.Button("Yes"))
-            {
+            //if (GUILayout.Button("Yes"))
+            if (GUILayout.Button(Localizer.Format("#NOTES-GUI-001"))) // Yes
+                {
                 try
                 {
                     Directory.Delete(_notesDir + _dirs[_selectDirGridInt]);
                 }
                 catch (Exception)
                 {
-                    ScreenMessages.PostScreenMessage("You need empty the folder before try to delete it.", 3f);
+                    ScreenMessages.PostScreenMessage(Localizer.Format("#NOTES-010"), 3f); // You need empty the folder before try to delete it.
                 }
                 _fileNames = null;
                 _showList = false;
@@ -333,19 +343,21 @@ namespace Notes
             GUILayout.BeginHorizontal();
             GUILayout.BeginVertical();
             // Loads selected note in the list.
-            if (GUILayout.Button("Load Selected File"))
+            //if (GUILayout.Button("Load Selected File"))
+            if (GUILayout.Button(Localizer.Format("#NOTES-GUI-004"))) // Load Selected File
             {
                 _file = _fileNames[_selectFileGridInt];
                 Load();
                 _fileNames = null;
                 _showList = false;
             }
-            if (GUILayout.Button("Change to Selected Directory"))
+            //if (GUILayout.Button("Change to Selected Directory"))
+            if (GUILayout.Button(Localizer.Format("#NOTES-GUI-005"))) // Change to Selected Directory
             {
                 if (_dirs.Count == 0)
                 {
                     _notesDir = KSPUtil.ApplicationRootPath.Replace("\\", "/") +
-                                "GameData/notes/Plugins/PluginData/notes/";
+                                "GameData/Notes/Plugins/PluginData/notes/";
                     _fileNames = null;
                     _showList = false;
                     GetNotes();
@@ -361,7 +373,8 @@ namespace Notes
                 }
             }
             GUILayout.BeginHorizontal();
-            if (GUILayout.Button("Create Directory"))
+            //if (GUILayout.Button("Create Directory"))
+            if (GUILayout.Button(Localizer.Format("#NOTES-GUI-006"))) // Create Directory
             {
                 Directory.CreateDirectory(_notesDir + _newdir);
                 _fileNames = null;
@@ -375,16 +388,19 @@ namespace Notes
             GUI.contentColor = Color.red;
             if (_dirs.Count > 0)
             {
-                if (GUILayout.Button("Delete Directory"))
+                //if (GUILayout.Button("Delete Directory"))
+                if (GUILayout.Button(Localizer.Format("#NOTES-GUI-007"))) // Delete Directory
                 {
                     _showdeldirdial = true;
                 }
             }
             // Delete the selected note.
             if (_fileNames.Count > 0)
+            if (_fileNames.Count > 0)
             {
-                if (GUILayout.Button("Delete File"))
-                {
+                //if (GUILayout.Button("Delete File"))
+                if (GUILayout.Button(Localizer.Format("#NOTES-GUI-008"))) // Delete File
+                    {
                     _showdeldial = true;
                 }
             }
@@ -403,12 +419,14 @@ namespace Notes
             GUILayout.EndHorizontal();
             GUILayout.BeginHorizontal();
             _scrollViewVector2 = GUILayout.BeginScrollView(_scrollViewVector2);
-            GUILayout.Label("Directories -- Current: " + new DirectoryInfo(_notesDir).Name);
+            //GUILayout.Label("Directories -- Current: " + new DirectoryInfo(_notesDir).Name);
+            GUILayout.Label(Localizer.Format("#NOTES-GUI-009", new DirectoryInfo(_notesDir).Name)); // "Directories -- Current: " + new DirectoryInfo(_notesDir).Name
             var _options2 = new[] { GUILayout.Width(225f), GUILayout.ExpandWidth(false) };
             _selectDirGridInt = GUILayout.SelectionGrid(_selectDirGridInt, _dirs.ToArray(), 1, _options2);
             GUILayout.EndScrollView();
             _scrollViewVector3 = GUILayout.BeginScrollView(_scrollViewVector3);
-            GUILayout.Label("Notes");
+            //GUILayout.Label("Notes");
+            GUILayout.Label(Localizer.Format("#NOTES-GUI-010")); // Notes
             if (_fileNames != null)
             {
                 _selectFileGridInt = GUILayout.SelectionGrid(_selectFileGridInt, _fileNames.ToArray(), 1, _options2);
@@ -450,7 +468,7 @@ namespace Notes
             // screen messages don't appear on those scenes
             else if ((HighLogic.LoadedScene != GameScenes.LOADING) && (HighLogic.LoadedScene != GameScenes.LOADINGBUFFER))
             {
-                ScreenMessages.PostScreenMessage("File don't exist: " + _file + _notesExt, 3f);
+                ScreenMessages.PostScreenMessage(Localizer.Format("#NOTES-011", _file, _notesExt), 3f); // "File don't exist: " + _file + _notesExt //File don't exist: <<1>><<2>>
             }
         }
 
@@ -478,7 +496,7 @@ namespace Notes
             _visible = _configFile.GetValue<bool>("main window state");
             _mouseButton = _configFile.GetValue("mouse button", 2);
             _notesDir = _configFile.GetValue("notesdir", KSPUtil.ApplicationRootPath.Replace("\\", "/") +
-                                                        "GameData/notes/Plugins/PluginData/notes/");
+                                                        "GameData/Notes/Plugins/PluginData/notes/");
 
             print("[notes.dll] Config Loaded Successfully");
         }
@@ -596,7 +614,8 @@ namespace Notes
             // Workaround for http://bugs.kerbalspaceprogram.com/issues/1230
             if (Application.platform == RuntimePlatform.LinuxPlayer)
             {
-                if (GUI.Toggle(new Rect(255f, 452f, 150f, 20f), _toggleInput, "Toggle input lock") != _toggleInput)
+                //if (GUI.Toggle(new Rect(255f, 452f, 150f, 20f), _toggleInput, "Toggle input lock") != _toggleInput)
+                if (GUI.Toggle(new Rect(255f, 452f, 150f, 20f), _toggleInput, Localizer.Format("#NOTES-GUI-011")) != _toggleInput) // Toggle input lock
                 {
                     toggleLock();
                 }
@@ -610,17 +629,20 @@ namespace Notes
             GUILayout.BeginVertical();
             GUILayout.BeginHorizontal();
             GUI.contentColor = Color.red;
-            GUILayout.Label($"Are you sure want to load/reload: {_file}? Unsaved changes will be lost!");
+            //GUILayout.Label($"Are you sure want to load/reload: {_file}? Unsaved changes will be lost!");
+            GUILayout.Label(Localizer.Format("#NOTES-GUI-012", _file)); // $"Are you sure want to load/reload: {_file}? Unsaved changes will be lost!"
             GUI.contentColor = Color.white;
             GUILayout.BeginVertical();
-            if (GUILayout.Button("Yes"))
+            //if (GUILayout.Button("Yes"))
+            if (GUILayout.Button(Localizer.Format("#NOTES-GUI-001"))) // Yes
             {
                 Load();
                 _showreloaddial = false;
             }
             GUILayout.EndVertical();
             GUILayout.BeginVertical();
-            if (GUILayout.Button("No"))
+            //if (GUILayout.Button("No"))
+            if (GUILayout.Button(Localizer.Format("#NOTES-GUI-002"))) // No
             {
                 _showreloaddial = false;
             }
@@ -636,10 +658,12 @@ namespace Notes
             GUILayout.BeginVertical();
             GUILayout.BeginHorizontal();
             GUI.contentColor = Color.red;
-            GUILayout.Label("Are you sure want to create new file? Unsaved changes will be lost!");
+            //GUILayout.Label("Are you sure want to create new file? Unsaved changes will be lost!");
+            GUILayout.Label(Localizer.Format("#NOTES-GUI-013")); // Are you sure want to create new file? Unsaved changes will be lost!
             GUI.contentColor = Color.white;
             GUILayout.BeginVertical();
-            if (GUILayout.Button("Yes"))
+            //if (GUILayout.Button("Yes"))
+            if (GUILayout.Button(Localizer.Format("#NOTES-GUI-001"))) // Yes
             {
                 _file = "newnote";
                 _text = String.Empty;
@@ -647,7 +671,8 @@ namespace Notes
             }
             GUILayout.EndVertical();
             GUILayout.BeginVertical();
-            if (GUILayout.Button("No"))
+            //if (GUILayout.Button("No"))
+            if (GUILayout.Button(Localizer.Format("#NOTES-GUI-002"))) // No
             {
                 _shownewnotedial = false;
             }
@@ -723,8 +748,7 @@ namespace Notes
             }
             else
             {
-                ScreenMessages.PostScreenMessage(
-                    "Log for " + _vesselName + " don't exist, creating new: " + _logPrefix + _vesselName + _notesExt, 3f);
+                ScreenMessages.PostScreenMessage(Localizer.Format("#NOTES-012", _vesselName, _logPrefix, _vesselName , _notesExt), 3f); // "Log for " + _vesselName + " don't exist, creating new: " + _logPrefix + _vesselName + _notesExt
                 _file = _logPrefix + _vesselName;
                 _text = _vesselInfo;
                 Save();
@@ -737,7 +761,7 @@ namespace Notes
             File.WriteAllText(_notesDir + _file + _notesExt, _text);
             if (HighLogic.LoadedScene != GameScenes.LOADINGBUFFER && HighLogic.LoadedScene != GameScenes.LOADING)
             {
-                ScreenMessages.PostScreenMessage("File saved: " + _file + _notesExt, 3f);
+                ScreenMessages.PostScreenMessage(Localizer.Format("#NOTES-013", _file, _notesExt), 3f); // "File saved: " + _file + _notesExt
             }
         }
 
@@ -770,7 +794,7 @@ namespace Notes
             CreateButtonIcon();
 #if false
             if (!ToolbarManager.ToolbarAvailable) return;
-            _button = ToolbarManager.Instance.add("notes", "toggle");
+            _button = ToolbarManager.Instance.add("Notes", "toggle");
             _button.TexturePath = _btextureOff;
             _button.ToolTip = _tooltipOff;
             _button.OnClick += e => Toggle();
