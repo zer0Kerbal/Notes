@@ -4,36 +4,36 @@
         <name>Notes</name>
     </assembly>
     <members>
-        <member name="T:Notes.InstallChecker">
+        <member name="T:notes.InstallChecker">
             <summary>MainMenu feedback</summary>
         </member>
-        <member name="M:Notes.InstallChecker.Startup.Start">
+        <member name="M:notes.InstallChecker.Startup.Start">
             <summary>the meat and potatoes</summary>
         </member>
-        <member name="M:Notes.InstallChecker.CleanupOldVersions">
+        <member name="M:notes.InstallChecker.CleanupOldVersions">
             <summary>Tries to fix the install if it was installed over the top of a previous version</summary>
         </member>
-        <member name="T:Notes.ToolbarManager">
+        <member name="T:notes.ToolbarManager">
             <summary>
             The global tool bar manager.
             </summary>
         </member>
-        <member name="P:Notes.ToolbarManager.ToolbarAvailable">
+        <member name="P:notes.ToolbarManager.ToolbarAvailable">
             <summary>
             Whether the Toolbar Plugin is available.
             </summary>
         </member>
-        <member name="P:Notes.ToolbarManager.Instance">
+        <member name="P:notes.ToolbarManager.Instance">
             <summary>
             The global tool bar manager instance.
             </summary>
         </member>
-        <member name="T:Notes.IToolbarManager">
+        <member name="T:notes.IToolbarManager">
             <summary>
             A toolbar manager.
             </summary>
         </member>
-        <member name="M:Notes.IToolbarManager.add(System.String,System.String)">
+        <member name="M:notes.IToolbarManager.add(System.String,System.String)">
             <summary>
             Adds a new button.
             </summary>
@@ -45,12 +45,12 @@
             <param name="id">The new button's ID. This ID must be unique across all buttons in the namespace. Must not include special characters like '.'</param>
             <returns>The button created.</returns>
         </member>
-        <member name="T:Notes.IButton">
+        <member name="T:notes.IButton">
             <summary>
             Represents a clickable button.
             </summary>
         </member>
-        <member name="P:Notes.IButton.Text">
+        <member name="P:notes.IButton.Text">
             <summary>
             The text displayed on the button. Set to null to hide text.
             </summary>
@@ -58,9 +58,9 @@
             The text can be changed at any time to modify the button's appearance. Note that since this will also
             modify the button's size, this feature should be used sparingly, if at all.
             </remarks>
-            <seealso cref="P:Notes.IButton.TexturePath"/>
+            <seealso cref="P:notes.IButton.TexturePath"/>
         </member>
-        <member name="P:Notes.IButton.TextColor">
+        <member name="P:notes.IButton.TextColor">
             <summary>
             The color the button text is displayed with. Defaults to Color.white.
             </summary>
@@ -68,7 +68,7 @@
             The text color can be changed at any time to modify the button's appearance.
             </remarks>
         </member>
-        <member name="P:Notes.IButton.TexturePath">
+        <member name="P:notes.IButton.TexturePath">
             <summary>
             The path of a texture file to display an icon on the button. Set to null to hide icon.
             </summary>
@@ -88,9 +88,9 @@
             The texture path can be changed at any time to modify the button's appearance.
             </para>
             </remarks>
-            <seealso cref="P:Notes.IButton.Text"/>
+            <seealso cref="P:notes.IButton.Text"/>
         </member>
-        <member name="P:Notes.IButton.ToolTip">
+        <member name="P:notes.IButton.ToolTip">
             <summary>
             The button's tool tip text. Set to null if no tool tip is desired.
             </summary>
@@ -98,28 +98,28 @@
             Tool Tip Text Should Always Use Headline Style Like This.
             </remarks>
         </member>
-        <member name="P:Notes.IButton.Visible">
+        <member name="P:notes.IButton.Visible">
             <summary>
-            Whether this button is currently visible or not. Can be used in addition to or as a replacement for <see cref="P:Notes.IButton.Visibility"/>.
+            Whether this button is currently visible or not. Can be used in addition to or as a replacement for <see cref="P:notes.IButton.Visibility"/>.
             </summary>
             <remarks>
             Setting this property to true does not affect the player's ability to hide the button using the configuration.
             Conversely, setting this property to false does not enable the player to show the button using the configuration.
             </remarks>
         </member>
-        <member name="P:Notes.IButton.Visibility">
+        <member name="P:notes.IButton.Visibility">
             <summary>
-            Determines this button's visibility. Can be used in addition to or as a replacement for <see cref="P:Notes.IButton.Visible"/>.
+            Determines this button's visibility. Can be used in addition to or as a replacement for <see cref="P:notes.IButton.Visible"/>.
             </summary>
             <remarks>
             The return value from IVisibility.Visible is subject to the same rules as outlined for
-            <see cref="P:Notes.IButton.Visible"/>.
+            <see cref="P:notes.IButton.Visible"/>.
             </remarks>
         </member>
-        <member name="P:Notes.IButton.EffectivelyVisible">
+        <member name="P:notes.IButton.EffectivelyVisible">
             <summary>
             Whether this button is currently effectively visible or not. This is a combination of
-            <see cref="P:Notes.IButton.Visible"/> and <see cref="P:Notes.IButton.Visibility"/>.
+            <see cref="P:notes.IButton.Visible"/> and <see cref="P:notes.IButton.Visibility"/>.
             </summary>
             <remarks>
             Note that the toolbar is not visible in certain game scenes, for example the loading screens. This property
@@ -127,13 +127,13 @@
             player's configuration of the button's visibility.
             </remarks>
         </member>
-        <member name="P:Notes.IButton.Enabled">
+        <member name="P:notes.IButton.Enabled">
             <summary>
             Whether this button is currently enabled (clickable) or not. This does not affect the player's ability to
             position the button on their toolbar.
             </summary>
         </member>
-        <member name="P:Notes.IButton.Important">
+        <member name="P:notes.IButton.Important">
             <summary>
             Whether this button is currently "important." Set to false to return to normal button behaviour.
             </summary>
@@ -144,7 +144,7 @@
             a chat room could mark itself as "important" as long as the message has not been read.
             </para>
             <para>
-            Setting this property does not change the appearance of the button. Use <see cref="P:Notes.IButton.TexturePath"/> to
+            Setting this property does not change the appearance of the button. Use <see cref="P:notes.IButton.TexturePath"/> to
             change the button's icon.
             </para>
             <para>
@@ -157,13 +157,13 @@
             </para>
             </remarks>
         </member>
-        <member name="P:Notes.IButton.Drawable">
+        <member name="P:notes.IButton.Drawable">
             <summary>
             A drawable that is tied to the current button. This can be anything from a popup menu to
             an informational window. Set to null to hide the drawable.
             </summary>
         </member>
-        <member name="E:Notes.IButton.OnClick">
+        <member name="E:notes.IButton.OnClick">
             <summary>
             Event handler that can be registered with to receive "on click" events.
             </summary>
@@ -176,7 +176,7 @@
             </code>
             </example>
         </member>
-        <member name="E:Notes.IButton.OnMouseEnter">
+        <member name="E:notes.IButton.OnMouseEnter">
             <summary>
             Event handler that can be registered with to receive "on mouse enter" events.
             </summary>
@@ -189,7 +189,7 @@
             </code>
             </example>
         </member>
-        <member name="E:Notes.IButton.OnMouseLeave">
+        <member name="E:notes.IButton.OnMouseLeave">
             <summary>
             Event handler that can be registered with to receive "on mouse leave" events.
             </summary>
@@ -202,24 +202,24 @@
             </code>
             </example>
         </member>
-        <member name="M:Notes.IButton.Destroy">
+        <member name="M:notes.IButton.Destroy">
             <summary>
             Permanently destroys this button so that it is no longer displayed.
             Should be used when a plugin is stopped to remove leftover buttons.
             </summary>
         </member>
-        <member name="T:Notes.IDrawable">
+        <member name="T:notes.IDrawable">
             <summary>
             A drawable that is tied to a particular button. This can be anything from a popup menu
             to an informational window.
             </summary>
         </member>
-        <member name="M:Notes.IDrawable.Update">
+        <member name="M:notes.IDrawable.Update">
             <summary>
             Update any information. This is called once per frame.
             </summary>
         </member>
-        <member name="M:Notes.IDrawable.Draw(UnityEngine.Vector2)">
+        <member name="M:notes.IDrawable.Draw(UnityEngine.Vector2)">
             <summary>
             Draws GUI widgets for this drawable. This is the equivalent to the OnGUI() message in
             <see cref="T:UnityEngine.MonoBehaviour"/>.
@@ -231,17 +231,17 @@
             <param name="position">The left/top position of where to draw this drawable.</param>
             <returns>The current width/height of this drawable.</returns>
         </member>
-        <member name="T:Notes.ClickEvent">
+        <member name="T:notes.ClickEvent">
             <summary>
             Event describing a click on a button.
             </summary>
         </member>
-        <member name="F:Notes.ClickEvent.Button">
+        <member name="F:notes.ClickEvent.Button">
             <summary>
             The button that has been clicked.
             </summary>
         </member>
-        <member name="F:Notes.ClickEvent.MouseButton">
+        <member name="F:notes.ClickEvent.MouseButton">
             <summary>
             The mouse button which the button was clicked with.
             </summary>
@@ -249,57 +249,57 @@
             Is 0 for left mouse button, 1 for right mouse button, and 2 for middle mouse button.
             </remarks>
         </member>
-        <member name="T:Notes.ClickHandler">
+        <member name="T:notes.ClickHandler">
             <summary>
             An event handler that is invoked whenever a button has been clicked.
             </summary>
             <param name="e">An event describing the button click.</param>
         </member>
-        <member name="T:Notes.MouseMoveEvent">
+        <member name="T:notes.MouseMoveEvent">
             <summary>
             Event describing the mouse pointer moving about a button.
             </summary>
         </member>
-        <member name="F:Notes.MouseMoveEvent.button">
+        <member name="F:notes.MouseMoveEvent.button">
             <summary>
             The button in question.
             </summary>
         </member>
-        <member name="T:Notes.MouseEnterEvent">
+        <member name="T:notes.MouseEnterEvent">
             <summary>
             Event describing the mouse pointer entering a button's area.
             </summary>
         </member>
-        <member name="T:Notes.MouseLeaveEvent">
+        <member name="T:notes.MouseLeaveEvent">
             <summary>
             Event describing the mouse pointer leaving a button's area.
             </summary>
         </member>
-        <member name="T:Notes.MouseEnterHandler">
+        <member name="T:notes.MouseEnterHandler">
             <summary>
             An event handler that is invoked whenever the mouse pointer enters a button's area.
             </summary>
             <param name="e">An event describing the mouse pointer entering.</param>
         </member>
-        <member name="T:Notes.MouseLeaveHandler">
+        <member name="T:notes.MouseLeaveHandler">
             <summary>
             An event handler that is invoked whenever the mouse pointer leaves a button's area.
             </summary>
             <param name="e">An event describing the mouse pointer leaving.</param>
         </member>
-        <member name="T:Notes.IVisibility">
+        <member name="T:notes.IVisibility">
             <summary>
             Determines visibility of a button.
             </summary>
-            <seealso cref="P:Notes.IButton.Visibility"/>
+            <seealso cref="P:notes.IButton.Visibility"/>
         </member>
-        <member name="P:Notes.IVisibility.Visible">
+        <member name="P:notes.IVisibility.Visible">
             <summary>
             Whether a button is currently visible or not.
             </summary>
-            <seealso cref="P:Notes.IButton.Visible"/>
+            <seealso cref="P:notes.IButton.Visible"/>
         </member>
-        <member name="T:Notes.GameScenesVisibility">
+        <member name="T:notes.GameScenesVisibility">
             <summary>
             Determines visibility of a button in relation to the currently running game scene.
             </summary>
@@ -309,31 +309,31 @@
             button.Visibility = new GameScenesVisibility(GameScenes.EDITOR, GameScenes.SPH);
             </code>
             </example>
-            <seealso cref="P:Notes.IButton.Visibility"/>
+            <seealso cref="P:notes.IButton.Visibility"/>
         </member>
-        <member name="T:Notes.PopupMenuDrawable">
+        <member name="T:notes.PopupMenuDrawable">
             <summary>
             A drawable that draws a popup menu.
             </summary>
         </member>
-        <member name="E:Notes.PopupMenuDrawable.OnAnyOptionClicked">
+        <member name="E:notes.PopupMenuDrawable.OnAnyOptionClicked">
             <summary>
             Event handler that can be registered with to receive "any menu option clicked" events.
             </summary>
         </member>
-        <member name="M:Notes.PopupMenuDrawable.AddOption(System.String)">
+        <member name="M:notes.PopupMenuDrawable.AddOption(System.String)">
             <summary>
             Adds a new option to the popup menu.
             </summary>
             <param name="text">The text of the option.</param>
             <returns>A button that can be used to register clicks on the menu option.</returns>
         </member>
-        <member name="M:Notes.PopupMenuDrawable.AddSeparator">
+        <member name="M:notes.PopupMenuDrawable.AddSeparator">
             <summary>
             Adds a separator to the popup menu.
             </summary>
         </member>
-        <member name="M:Notes.PopupMenuDrawable.Destroy">
+        <member name="M:notes.PopupMenuDrawable.Destroy">
             <summary>
             Destroys this drawable. This must always be called before disposing of this drawable.
             </summary>
