@@ -16,14 +16,14 @@ using System.Reflection;
 using UnityEngine;
 using KSP.Localization;
 
-namespace Notes
+namespace notes
 {
     /// <summary>MainMenu feedback</summary>
     [KSPAddon(KSPAddon.Startup.MainMenu, true)]
     internal class InstallChecker : MonoBehaviour
     {
-        private const string MODNAME = "MoarKerbals";
-        private const string FOLDERNAME = "KerbthulhuKineticsProgram/MoarKerbals";
+        private const string MODNAME = "Notes";
+        private const string FOLDERNAME = "Notes";
         private const string EXPECTEDPATH = FOLDERNAME + "/Plugins";
 
         protected void Start()
@@ -37,9 +37,9 @@ namespace Notes
                 (
                     anchorMin: new Vector2(0.5f, 0.5f),
                     anchorMax: new Vector2(0.5f, 0.5f),
-                    dialogName: "InstallChecker",
-                    title: Localizer.Format("#NOTES-IC-00" + " InstallChecker", Version.Text),
-                    message: Localizer.Format("#NOTES-IC-01", Version.Text, Localizer.Format("#NOTES-IC-00"), FOLDERNAME, String.Join("\n", badPaths.ToArray())),
+                    dialogName: Localizer.Format("#NOTES-IC-01"), // "InstallChecker",
+                    title: Localizer.Format("#NOTES-IC-02", Version.Text),
+                    message: Localizer.Format("#NOTES-IC-03", Version.Text, Localizer.Format("#NOTES-IC-00"), FOLDERNAME, String.Join("\n", badPaths.ToArray())),
                     //"Incorrect <<1>> v<<2>> installation.\n<<1>> has been installed incorrectly and will not function properly. All files should be located in KSP/GameData/<<3>>. Do not move any files from inside that folder.\n\nIncorrect path(s):\n<<4>>
                     buttonMessage: "OK",
                     persistAcrossScenes: false,
