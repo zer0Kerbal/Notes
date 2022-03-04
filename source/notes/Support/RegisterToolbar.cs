@@ -10,7 +10,7 @@ using File = System.IO.File;
 using KSP.UI.Screens;
 using ToolbarControl_NS;
 
-namespace Notes
+namespace notes
 {
 
     [KSPAddon(KSPAddon.Startup.MainMenu, true)]
