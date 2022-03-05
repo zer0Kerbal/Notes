@@ -19,4 +19,4 @@ jobs:
       with:
         dotnet-version: 4.7.2
     - name: Build KSPChromaControl
-      run: dotnet build  ./source/notes.csproj
+      run: dotnet build  ./source/Notes.csproj
