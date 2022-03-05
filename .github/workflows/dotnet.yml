@@ -19,4 +19,4 @@ jobs:
       with:
         dotnet-version: 4.7.2
     - name: Build Notes
-      run: dotnet build  ./source/Notes.csproj
+      run: dotnet build  ./source/Notes/Notes.csproj
