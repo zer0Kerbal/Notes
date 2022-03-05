@@ -52,6 +52,7 @@ Attribution
 [LINK:moardv]: https://forum.kerbalspaceprogram.com/index.php?/profile/60950-moardv/ "MoarDV"
 [LINK:jonnyothan]: https://forum.kerbalspaceprogram.com/index.php?/profile/40902-jonnyothan/ "JonnyOThan"
 [LINK:mihara]: https://forum.kerbalspaceprogram.com/index.php?/profile/59752-mihara/ "Mihara"
+[LINK:blizzy78]: https://forum.kerbalspaceprogram.com/index.php?/profile/68543-blizzy78/ "Blizzy78"
 
 <!-- this file CC BY-NC-ND 3.0 Un
 ported by zer0Kerbal-->
