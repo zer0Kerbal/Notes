@@ -18,5 +18,5 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 4.7.2
-    - name: Build KSPChromaControl
+    - name: Build Notes
       run: dotnet build  ./source/Notes.csproj
