@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>notesRPM</name>
+    </assembly>
+    <members>
+        <member name="T:notesRPM.notesRPM">
+            <summary>
+            notesRPM part module
+            </summary>
+        </member>
+        <member name="F:notesRPM.notesRPM.noteButton">
+            <summary>
+            public int noteButton 
+            </summary>
+        </member>
+        <member name="F:notesRPM.notesRPM.downButton">
+            <summary>
+            public int downButton
+            </summary>
+        </member>
+        <member name="F:notesRPM.notesRPM.infoButton">
+            <summary>
+            public int infoButton
+            </summary>
+        </member>
+        <member name="F:notesRPM.notesRPM.nextnoteButton">
+            <summary>
+            int nextnoteButton
+            </summary>
+        </member>
+        <member name="F:notesRPM.notesRPM.prevnoteButton">
+            <summary>
+            int prevnoteButton
+            </summary>
+        </member>
+        <member name="F:notesRPM.notesRPM.textTint">
+            <summary>
+            kOS: string textTint #009900ff
+            </summary>
+        </member>
+        <member name="F:notesRPM.notesRPM.textTintUnpowered">
+            <summary>
+            kOS: string textTintUnpowered #ffffff3e
+            </summary>
+        </member>
+        <member name="F:notesRPM.notesRPM.consoleWidth">
+            <summary>
+            kOS: int consoleWidth = 40
+            </summary>
+        </member>
+        <member name="F:notesRPM.notesRPM.consoleHeight">
+            <summary>
+            kOS: int consoleHeight = 20
+            </summary>
+        </member>
+        <member name="M:notesRPM.notesRPM.ContentProcessor(System.Int32,System.Int32)">
+            <summary>
+            processes content
+            </summary>
+            <param name="screenWidth"></param>
+            <param name="screenHeight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:notesRPM.notesRPM.ButtonProcessor(System.Int32)">
+            <summary>
+            ButtonProcessor(int buttonID)
+            </summary>
+            <param name="buttonID"></param>
+        </member>
+        <member name="T:notesRPM.RPMConsole">
+            <summary>
+            unused class
+            </summary>
+        </member>
+    </members>
+</doc>

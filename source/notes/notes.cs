@@ -37,13 +37,16 @@ using File = System.IO.File;
 
 using KSP.UI.Screens;
 using KSP.Localization;
+using UnityEngine.Networking;
 
 using ToolbarControl_NS;
 
-namespace Notes
+namespace notes
 {
     [KSPAddon(KSPAddon.Startup.SpaceCentre, true)]
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public class Notes : MonoBehaviour
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
         // Define the controls to block.
         private const ControlTypes _blockAllControls =
@@ -61,10 +64,11 @@ namespace Notes
 
         // The "show it" text of toggle delete button.
         // private const string _showButtonDelText = "Show delete";
-        private readonly string _showButtonDelText = Localizer.Format("#NOTES-EXP-001"); // "Show delete";
+        private readonly string _showButtonDelText = Localizer.Format("#NOTES-RO-001"); // "Show delete";
 
         // The "hide it" text of toggle delete button.
-        private const string _hideButtonDelText = "Hide delete";
+        //private const string _hideButtonDelText = "Hide delete";
+        private readonly string _hideButtonDelText = Localizer.Format("#NOTES-RO-002"); //Hide delete
 
         // The mouse button for open notes in the list on click 0=left 1=right 2=middle(default).
         private int _mouseButton = -1;
@@ -105,7 +109,9 @@ namespace Notes
         private bool _showList;
 
         // The reload icon texture.
+        //private WWW _reloadIconTex;
         private WWW _reloadIconTex;
+        //private UnityWebRequestTexture _reloadIconTex;
 
         // The scroll view vector.
         private Vector2 _scrollViewVector = Vector2.zero;
@@ -120,20 +126,30 @@ namespace Notes
 
         private int _selectDirGridInt;
 
-        // The text of the note.
+        /// <summary>
+        /// The text of the note.
+        /// </summary>
         public string _text;
 
-        // true to show delete button, false to hide.
+        /// <summary>
+        /// true to show delete button, false to hide.
+        /// </summary>
         private bool _toggleDel;
 
-        // true lock input, false to unlock.
+        /// <summary>
+        /// true lock input, false to unlock.
+        /// </summary>
         private bool _toggleInput;
 
-        // The tooltip text for the toolbar icon if the plugin is off.
-        private const string _tooltipOff = "Show Notepad";
+        /// <summary>
+        /// The tooltip text for the toolbar icon if the plugin is off.
+        /// </summary>
+        private readonly string _tooltipOff = Localizer.Format("#NOTES-RO-003"); // Show Notepad
 
-        // The tooltip text for the toolbar icon if the plugin is on.
-        private const string _tooltipOn = "Hide Notepad";
+        /// <summary>
+        /// The tooltip text for the toolbar icon if the plugin is on.
+        /// </summary>
+        private readonly string _tooltipOn = Localizer.Format("#NOTES-RO-004"); // Hide Notepad
 
         // The version of the plugin.
         private string _version;
@@ -141,7 +157,9 @@ namespace Notes
         // The version in the last run.
         private string _versionLastRun;
 
-        // The vessel info.
+        /// <summary>
+        /// The vessel info.
+        /// </summary>
         public string _vesselInfo;
 
         // The vessel name.
@@ -187,6 +205,7 @@ namespace Notes
             LoadSettings();
             _text = File.ReadAllText(_notesDir + _file + _notesExt);
             _reloadIconTex = new WWW(_reloadIconUrl);
+           // _reloadIconTex = new UnityWebRequest(url: _reloadIconUrl);
             DontDestroyOnLoad(this);
         }
 
@@ -270,7 +289,9 @@ namespace Notes
             GUI.DragWindow();
         }
 
-        // Get vessel log information.
+        /// <summary>
+        /// Get vessel log information.
+        /// </summary>
         public void GetLogInfo()
         {
             if (!HighLogic.LoadedSceneIsFlight || !HighLogic.LoadedSceneHasPlanetarium) return;
@@ -336,6 +357,7 @@ namespace Notes
         //
         // <param name="windowId">Identifier for the window.</param>
 
+        [Obsolete]
         private void ListWindow(int windowId)
         {
             // Notes list gui.
@@ -435,6 +457,8 @@ namespace Notes
                 GUILayout.EndVertical();
 
                 // Close the list window.
+                // Make the close button color = red;
+                GUI.contentColor = Color.red;
                 if (GUI.Button(new Rect(2f, 2f, 13f, 13f), "X"))
                 {
                     if (_showList)
@@ -443,6 +467,7 @@ namespace Notes
                         _showList = false;
                     }
                 }
+                GUI.contentColor = Color.white;
                 // detect middle clicks and load the clicked note if it's not already loaded.
                 if (Input.GetMouseButtonUp(_mouseButton))
                 {
@@ -531,17 +556,20 @@ namespace Notes
             // Show the actual note file name.
             _file = GUI.TextField(new Rect(5f, 410f, 150f, 20f), _file);
             // Load note file button.
-            if (GUI.Button(new Rect(155f, 410f, 80f, 30f), "Reload"))
+            //if (GUI.Button(new Rect(155f, 410f, 80f, 30f), "Reload"))
+            if (GUI.Button(new Rect(155f, 410f, 80f, 30f), Localizer.Format("#NOTES-GUI-014"))) // Reload
             {
                 _showreloaddial = true;
             }
             // Save note file button.
-            if (GUI.Button(new Rect(235f, 410f, 80f, 30f), "Save"))
+            //if (GUI.Button(new Rect(235f, 410f, 80f, 30f), "Save"))
+            if (GUI.Button(new Rect(235f, 410f, 80f, 30f), Localizer.Format("#NOTES-GUI-015"))) // Save
             {
                 Save();
             }
             // Opens the notes list windows.
-            if (GUI.Button(new Rect(315f, 410f, 80f, 30f), "List Notes"))
+            //if (GUI.Button(new Rect(315f, 410f, 80f, 30f), "List Notes"))
+            if (GUI.Button(new Rect(315f, 410f, 80f, 30f), Localizer.Format("#NOTES-GUI-016"))) // List Notes
             {
                 if (_showList)
                 {
@@ -554,17 +582,20 @@ namespace Notes
                 }
             }
             //New file
-            if (GUI.Button(new Rect(155f, 445f, 80f, 30f), "New Note"))
+            //if (GUI.Button(new Rect(155f, 445f, 80f, 30f), "New Note"))
+            if (GUI.Button(new Rect(155f, 445f, 80f, 30f), Localizer.Format("#NOTES-GUI-017"))) // New Note
             {
                 _shownewnotedial = true;
             }
             // Close the notes window.
+            GUI.contentColor = Color.red;
             if (GUI.Button(new Rect(2f, 2f, 13f, 13f), "X"))
             {
                 Toggle();
             }
+            GUI.contentColor = Color.white;
             // Toggle current skin.
-            if (GUI.Button(new Rect(20f, 2f, 22f, 16f), "S"))
+            if (GUI.Button(new Rect(20f, 2f, 22f, 16f), Localizer.Format("#NOTES-GUI-018"))) // S
             {
                 _useKspSkin = !_useKspSkin;
             }
@@ -575,7 +606,8 @@ namespace Notes
                 if (_fontSize <= 1) return;
                 _fontSize--;
             }
-            GUI.Label(new Rect(95f, 0f, 60f, 20f), "Font size");
+            //GUI.Label(new Rect(95f, 0f, 60f, 20f), "Font size");
+            GUI.Label(new Rect(95f, 0f, 60f, 20f), Localizer.Format("#NOTES-GUI-019")); // Font size
             if (GUI.Button(new Rect(150f, 2f, 15f, 15f), "+"))
             {
                 // Big big big!!!
@@ -585,7 +617,8 @@ namespace Notes
             {
                 SelectNote(false);
             }
-            GUI.Label(new Rect(275f, 0f, 60f, 20f), "Note");
+            //GUI.Label(new Rect(275f, 0f, 60f, 20f), "Note");
+            GUI.Label(new Rect(275f, 0f, 60f, 20f), Localizer.Format("#NOTES-GUI-020")); // Note
             if (GUI.Button(new Rect(305f, 2f, 15f, 15f), ">"))
             {
                 SelectNote(true);
@@ -597,14 +630,16 @@ namespace Notes
                 // Just in case
                 if (FlightGlobals.ActiveVessel != null) _vesselName = FlightGlobals.ActiveVessel.GetName();
                 // Button for open the vessel log file
-                if (GUI.Button(new Rect(5f, 432f, 100f, 20f), "Open ship log"))
+                //if (GUI.Button(new Rect(5f, 432f, 100f, 20f), "Open ship log"))
+                if (GUI.Button(new Rect(5f, 432f, 100f, 20f), Localizer.Format("#NOTES-GUI-021"))) // Open ship log
                 {
                     OpenLog();
                 }
                 // If the vessel log opened is the one for the current vessel, show the button to add a new entry.
                 if (_logPrefix + _vesselName == _file)
                 {
-                    if (GUI.Button(new Rect(5f, 452f, 100f, 20f), "New log entry"))
+                    //if (GUI.Button(new Rect(5f, 452f, 100f, 20f), "New log entry"))
+                    if (GUI.Button(new Rect(5f, 452f, 100f, 20f), Localizer.Format("#NOTES-GUI-022"))) // New log entry
                     {
                         GetLogInfo();
                         _text = _text + _vesselInfo;
@@ -630,7 +665,7 @@ namespace Notes
             GUILayout.BeginHorizontal();
             GUI.contentColor = Color.red;
             //GUILayout.Label($"Are you sure want to load/reload: {_file}? Unsaved changes will be lost!");
-            GUILayout.Label(Localizer.Format("#NOTES-GUI-012", _file)); // $"Are you sure want to load/reload: {_file}? Unsaved changes will be lost!"
+            GUILayout.Label(Localizer.Format("#NOTES-GUI-012", _file)); // Are you sure want to load/reload: {_file}? Unsaved changes will be lost!
             GUI.contentColor = Color.white;
             GUILayout.BeginVertical();
             //if (GUILayout.Button("Yes"))
@@ -698,6 +733,7 @@ namespace Notes
         }
 
         // Executes the graphical user interface action.
+        [Obsolete]
         private void OnGUI()
         {
             // Saves the current Gui.skin for later restore
@@ -705,33 +741,40 @@ namespace Notes
             if (_visible)
             {
                 GUI.skin = _useKspSkin ? HighLogic.Skin : _defGuiSkin;
-                _windowRect = GUI.Window(GUIUtility.GetControlID(FocusType.Passive), _windowRect, NotesWindow, "Notepad");
+                //_windowRect = GUI.Window(GUIUtility.GetControlID(FocusType.Passive), _windowRect, NotesWindow, "Notepad");
+                _windowRect = GUI.Window(GUIUtility.GetControlID(FocusType.Passive), _windowRect, NotesWindow,
+                    Localizer.Format("#NOTES-GUI-023")); // Notepad
             }
             if (_showList)
             {
+                //_windowRect2 = GUI.Window(GUIUtility.GetControlID(FocusType.Passive), _windowRect2, ListWindow, "Notes list");
                 _windowRect2 = GUI.Window(GUIUtility.GetControlID(FocusType.Passive), _windowRect2, ListWindow,
-                    "Notes list");
+                    Localizer.Format("#NOTES-GUI-024")); // Notes list
                 UpdateDelButtonText();
             }
             if (_showdeldial)
             {
+                //_windowRect3 = GUI.Window(GUIUtility.GetControlID(FocusType.Passive), _windowRect3, DelWindow, "File Deletion Dialog");
                 _windowRect3 = GUI.Window(GUIUtility.GetControlID(FocusType.Passive), _windowRect3, DelWindow,
-                    "File Deletion Dialog");
+                    Localizer.Format("#NOTES-GUI-025")); // File Deletion Dialog
             }
             if (_showdeldirdial)
             {
+                //_windowRect4 = GUI.Window(GUIUtility.GetControlID(FocusType.Passive), _windowRect4, DelDirWindow, "Directory Deletion Dialog");
                 _windowRect4 = GUI.Window(GUIUtility.GetControlID(FocusType.Passive), _windowRect4, DelDirWindow,
-                    "Directory Deletion Dialog");
+                    Localizer.Format("#NOTES-GUI-026")); // Directory Deletion Dialog
             }
             if (_showreloaddial)
             {
+                //_windowRect5 = GUI.Window(GUIUtility.GetControlID(FocusType.Passive), _windowRect5, Reloaddial, "File Reload Dialog");
                 _windowRect5 = GUI.Window(GUIUtility.GetControlID(FocusType.Passive), _windowRect5, Reloaddial,
-                   "File Reload Dialog");
+                    Localizer.Format("#NOTES-GUI-027")); // File Reload Dialog
             }
             if (_shownewnotedial)
             {
+                //_windowRect6 = GUI.Window(GUIUtility.GetControlID(FocusType.Passive), _windowRect6, NewFiledial, "New File Dialog");
                 _windowRect6 = GUI.Window(GUIUtility.GetControlID(FocusType.Passive), _windowRect6, NewFiledial,
-                   "New File Dialog");
+                    Localizer.Format("#NOTES-GUI-028")); // New File Dialog
             }
             //Restore the skin
             GUI.skin = _defGuiSkin;
@@ -895,6 +938,10 @@ namespace Notes
             File.Delete(_notesDir + "config.xml");
         }
 
+        /// <summary>
+        /// Select Note
+        /// </summary>
+        /// <param name="direction"></param>
         public void SelectNote(bool direction)
         {
             if (!direction)
