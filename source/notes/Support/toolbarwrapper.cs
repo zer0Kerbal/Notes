@@ -439,6 +439,9 @@ namespace notes
     {
         private GameScenes[] gameScenes;
 
+        /// <summary>
+        /// Visable
+        /// </summary>
         public bool Visible
         {
             get
