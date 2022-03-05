@@ -7,7 +7,7 @@ updated: 02 Mar 2022 -->
 
 [![MODNAME][MOD:shd:latest]][MOD:forum] [![KSP version][KSP:shd]][KSP:url]  [![License][LIC:shd]][LIC:url]  
 [![Curseforge][CURSFG:shd]][CURSFG:url] [![CKAN][CKAN:shd]][CKAN:url] [![GitHub][GITHUB:shd]][GITHUB:url] [![SpaceDock][SPCDCK:shd]][SPCDCK:url]  
-![Code][CODE:shd] ![KSP-AVC][AVC:shd] ![Validate AVC .version files][AVCVLD:shd]
+![Code][CODE:shd] ![KSP-AVC][AVC:shd] ![Validate AVC .version files][AVCVLD:shd] [![.NET](https://github.com/zer0Kerbal/Notes/actions/workflows/dotnet.yml/badge.svg)](https://github.com/zer0Kerbal/Notes/actions/workflows/dotnet.yml)
 
 
 
