@@ -72,7 +72,7 @@ updated: 02 Mar 2022 -->
 
 ### Localization - _work in progress_
 
->* [x]  ![][EN] English - in progress
+>* [x]  ![][EN] English
 >* [ ]  ***your translation here***
 >
 > HELP WANTED - See the [README in the Localization folder][MOD:local] for instructions for adding or improving translations. [GitHub][GitHub:url] push is the best way to contribute. *Additions and corrections welcome!*
