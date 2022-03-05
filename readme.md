@@ -208,7 +208,7 @@ or [![CKAN][CKAN:img]][CKAN:url] [^3]
 <!-- links to add-ons/mods -->  
 [thread:mm]:  http://forum.kerbalspaceprogram.com/index.php?/topic/50533-* "Module Manager"
 [threade:mas]:https://forum.kerbalspaceprogram.com/index.php?/topic/160856-* "MOARdV's Avionics Systems - MAS"
-[thread:rpm]: https://forum.kerbalspaceprogram.com/threads/117471 "Raster Prop Monitor"
+[thread:rpm]: https://forum.kerbalspaceprogram.com/threads/117471-* "Raster Prop Monitor"
 [thread:tb]: https://forum.kerbalspaceprogram.com/index.php?/topic/161857-* "Blizzy78's Toolbar"
 [thread:tbc]: https://forum.kerbalspaceprogram.com/index.php?/topic/169509-* "Toolbar Controller"
 [thread:ckan]: https://forum.kerbalspaceprogram.com/index.php?/topic/154922-* "CKAN"

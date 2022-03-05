@@ -108,6 +108,8 @@ updated: 22 Jan 2022
 * create [Attribution.md]
 * create [LegalMumboJumbo.md]
 * create [Localization.md]
+* create [\Code\[Notes.xml]
+* create [\Code\[notesRPM.xml]
 
 ### Status
 
