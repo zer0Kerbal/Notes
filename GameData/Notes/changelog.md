@@ -81,16 +81,21 @@ updated: 22 Jan 2022
   * add .xml notes
   * update namespace
   * insert [obsolete] (temporarily)
+  * make window close button X red
+  * change private const string to private readonly string so could localize
 * [notesRPM.cs]
   * add .xml notes
   * update namespace
+* remove extra code files that are no longer needed
+  * closes #38 - Remove extraneous code files
+  * closes #28 - Click-Through-Blocker
 
 ### Automation
 
 * Update
   * [_buildJSON] v1.3.3.6.2
   * [_buildRelease] v1.1.3.1
-  * [_deploy] v1.1.1.3
+  * [_deploy] v1.1.2.0
   * [_gitReleaseNotes] v1.1.0.1
   * [_gitPullIssues] v1.1.0.1
   * [_gitReleaseNotes] v1.1.0.1
@@ -113,17 +118,22 @@ updated: 22 Jan 2022
 
 ### Status
 
+* closes #9 - Adoption - social media
+* closes #8 - Release 0.17.0.0-adoption - Kollege Ruled
+* closes #7 - Adoption Documentation
+* closes #6 - Adoption - GitHub
+* closes #5 - Adoption Legal MumboJumbo
 * closes #14 - Version 0.17.0.0-adoption
 * closes #15 - 0.17.0.0-adoption Social
 * closes #16 - 0.17.0.0-adoption Release
 * closes #17 - 0.17.0.0-adoption Update documentatio
 * closes #18 - 0.17.0.0-adoption Legal MumboJumbo
+* closes #41 - Adoption and Initial Release Notes and NotesRPM
 
 * #1 - sidestream - contributed by zer0Kerbal
 * #4 - [ImgBot] Optimize images - contributed by imgbot[bot]
 * #27 - upstream master - contributed by zer0Kerbal
 * #30 - Create JSON - contributed by zer0Kerbal
-* closes #41 - Adoption and Initial Release Notes and NotesRPM
 
 ## Version 0.16
 
