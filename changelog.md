@@ -135,6 +135,8 @@ updated: 22 Jan 2022
 * #27 - upstream master - contributed by zer0Kerbal
 * #30 - Create JSON - contributed by zer0Kerbal
 
+---
+
 ## Version 0.16
 
 * Recompiled for KSP 1.8.0
