@@ -4,11 +4,16 @@ title: Attributions
 ---
 
 <!--
-Attributions.md v1.0.1.0
+Attributions.md v1.0.2.1
 Notes (Notes)
 created: 01 Feb 2022
-updated: 01 Feb 2022
+updated: 06 Mar 2022
 -->
+
+[Home](https://zer0kerbal.github.io/Notes)
+
+<script src="https://kit.fontawesome.com/0ea5493613.js" crossorigin="anonymous"></script>
+<i class="fa fa-gear fa-spin fa-2x" style="color: firebrick"></i>
 
 # Notes (Notes)
 
@@ -30,16 +35,15 @@ Attribution
 ### Special Thanks
 
 * [Blizzy78][LINK:blizzy78] for creating the toolbar!
-* Cpt. Kipard for the [Mod Development Links Compilation](https://forum.kerbalspaceprogram.com/threads/94638) and other tutorials.
+* [Captain Kipard](https://forum.kerbalspaceprogram.com/index.php?/profile/70516-*/) for the [Mod Development Links Compilation](https://forum.kerbalspaceprogram.com/index.php?/topic/85372-*) and other tutorials.
 
 * Everyone else who made modding tutorials.
 
 ### Testing and Support
 
 <ul>
-  <li><a href="https://forum.kerbalspaceprogram.com/index.php?/profile/133828-eightiesboi/"><img border="0" alt="eightiesboi" src="https://kerbal-forum-uploads.s3.us-west-2.amazonaws.com/monthly_2018_01/happy_velociraptor_dinosaur_greeting_cards-r918b99ab65894a198682f360e419773a_xvuak_8byvr_512.thumb.jpg.00c28897eef8a91ee74f6cb59a9bbb5f.jpg" width="100" height="100" > eightiesboi</a></li>
+  <li><a href="https://forum.kerbalspaceprogram.com/index.php?/profile/133828-eightiesboi/"><img alt="eightiesboi" src="https://kerbal-forum-uploads.s3.us-west-2.amazonaws.com/monthly_2018_01/happy_velociraptor_dinosaur_greeting_cards-r918b99ab65894a198682f360e419773a_xvuak_8byvr_512.thumb.jpg.00c28897eef8a91ee74f6cb59a9bbb5f.jpg" width="100" height="100" > eightiesboi</a></li>
 </ul>
-
 
 [thread:tb]: https://forum.kerbalspaceprogram.com/index.php?/topic/161857-* "Blizzy78's Toolbar"
 [threade:mas]:https://forum.kerbalspaceprogram.com/index.php?/topic/160856-* "MOARdV's Avionics Systems (MAS)"
@@ -54,5 +58,9 @@ Attribution
 [LINK:mihara]: https://forum.kerbalspaceprogram.com/index.php?/profile/59752-mihara/ "Mihara"
 [LINK:blizzy78]: https://forum.kerbalspaceprogram.com/index.php?/profile/68543-blizzy78/ "Blizzy78"
 
+<<<<<<< Updated upstream
 <!-- this file CC BY-NC-ND 3.0 Un
 ported by zer0Kerbal-->
+=======
+<!-- this file CC BY-NC-ND 3.0 Unported by zer0Kerbal-->
+>>>>>>> Stashed changes
