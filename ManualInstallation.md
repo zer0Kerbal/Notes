@@ -91,9 +91,9 @@ To install, place the GameData folder inside your Kerbal Space Program folder:
         gamedata -. file .-> ModuleManager[/ModuleManager.dll\]
       end
       subgraph id3 [Notes Folder]
-        Notes -- folder --> Compatability & Localization & NotePad & Plugins & Textures & Files
+        Notes -- folder --> Compatibility & Localization & NotePad & Plugins & Textures & Files
         Files .-> a>0.17.0.0.htm] & b>changelog.md] & c>Notes.version] & d>notesRPM.version] & e>readme.htm]
-      Compatability --> 1[...]
+      Compatibility --> 1[...]
       Localization --> 2[...]
       NotePad --> 3[...]
       Plugins .-> 40[/Notes.dll\] & 41[/notesRPM.dll\] & 42[...]
