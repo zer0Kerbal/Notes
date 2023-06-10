@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="xml.css"?>
+<?xml-stylesheet type="text/xsd" href="Notes.xld"?>
 <doc>
     <assembly>
         <name>Notes</name>
